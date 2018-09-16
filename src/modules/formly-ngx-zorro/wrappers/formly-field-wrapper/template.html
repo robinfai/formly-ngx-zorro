@@ -1,11 +1,11 @@
 <nz-form-item>
-    <nz-form-label 
-    [nzSm]="6" 
-    [nzXs]="24" 
-    [nzRequired]="to.required"
-    [nzFor]="id">
-    {{ to.label }}
-</nz-form-label>
+    <nz-form-label
+            [nzSm]="6"
+            [nzXs]="24"
+            [nzRequired]="to.required"
+            [nzFor]="id">
+        {{ to.label }}
+    </nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24">
         <ng-template #fieldComponent></ng-template>
         <nz-form-explain *ngIf="showError">

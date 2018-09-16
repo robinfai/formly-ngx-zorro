@@ -1,6 +1,7 @@
-<input nz-input [formControl]="formControl" [formlyAttributes]="field" [name]="id" (input)="onInput($event.target?.value)" [nzAutocomplete]="auto" >
+<input nz-input [formControl]="formControl" [formlyAttributes]="field" [name]="id"
+       (input)="onInput($event.target?.value)" [nzAutocomplete]="auto">
 <nz-autocomplete nzBackfill #auto>
     <nz-auto-option *ngFor="let option of data" [nzValue]="option.value">
-        {{option.label}}
+        {{ option.label }}
     </nz-auto-option>
 </nz-autocomplete>

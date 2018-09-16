@@ -7,7 +7,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormlyFieldInputComponent } from './types/input/input-component';
-import { FormlyFieldWrapper } from './wrappers/formly-field-wrapper/formly-field-wrapper';
+import { FormlyFieldWrapperComponent } from './wrappers/formly-field-wrapper/formly-field-wrapper-component';
 import { FormlyFieldAutocompleteComponent } from './types/autocomplete/autocomplete-component';
 import { FormlyFieldCascaderComponent } from './types/cascader/cascader-component';
 import { FormlyFieldCheckboxComponent } from './types/checkbox/checkbox-component';
@@ -87,22 +87,13 @@ export const ForRootFormlyModule = FormlyModule.forRoot({
             name: 'tree-select',
             wrappers: ['field-wrapper'],
             component: FormlyFieldTreeSelectComponent
-        },
+        }
     ],
-    wrappers: [
-        { name: 'field-wrapper', component: FormlyFieldWrapper },
-    ]
+    wrappers: [{name: 'field-wrapper', component: FormlyFieldWrapperComponent}]
 });
 
-
 @NgModule({
-    imports: [
-        NgZorroAntdModule,
-        ReactiveFormsModule,
-        FormsModule,
-        CommonModule,
-        ForRootFormlyModule
-    ],
+    imports: [NgZorroAntdModule, ReactiveFormsModule, FormsModule, CommonModule, ForRootFormlyModule],
     declarations: [
         FormlyFieldInputComponent,
         FormlyFieldAutocompleteComponent,
@@ -117,7 +108,7 @@ export const ForRootFormlyModule = FormlyModule.forRoot({
         FormlyFieldSwitchComponent,
         FormlyFieldTimePickerComponent,
         FormlyFieldTreeSelectComponent,
-        FormlyFieldWrapper,
+        FormlyFieldWrapperComponent
         // Pipes.
         // Directives.
         // Components.
