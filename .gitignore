@@ -1,0 +1,9 @@
+$ cat .gitignore
+.DS_Store
+node_modules
+/dist
+/documentation
+/coverage
+
+*.log
+*.tgz

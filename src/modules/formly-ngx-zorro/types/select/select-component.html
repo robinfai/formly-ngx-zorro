@@ -1,0 +1,3 @@
+<nz-select [nzShowSearch]="to['showSearch']" [nzAllowClear]="to['allowClear']" [nzPlaceHolder]="to['placeHolder']" [formControl]="formControl" [formlyAttributes]="field" ngDefaultControl>
+    <nz-option *ngFor="let option of to.options" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+</nz-select>

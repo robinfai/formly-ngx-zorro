@@ -1,0 +1,5 @@
+<nz-checkbox-wrapper (nzOnChange)="model[key]=$event">
+    <ng-container *ngFor="let item of to.options">
+        <label nz-checkbox [nzValue]="item.value">{{item.label}}</label>
+    </ng-container>
+</nz-checkbox-wrapper>

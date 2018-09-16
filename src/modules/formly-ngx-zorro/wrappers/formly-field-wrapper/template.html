@@ -1,0 +1,16 @@
+<nz-form-item>
+    <nz-form-label 
+    [nzSm]="6" 
+    [nzXs]="24" 
+    [nzRequired]="to.required"
+    [nzFor]="id">
+    {{ to.label }}
+</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24">
+        <ng-template #fieldComponent></ng-template>
+        <nz-form-explain *ngIf="showError">
+            <formly-validation-message [field]="field"></formly-validation-message>
+        </nz-form-explain>
+        <nz-form-extra *ngIf="to.description">{{ to.description }}</nz-form-extra>
+    </nz-form-control>
+</nz-form-item>
