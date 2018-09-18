@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-path ../formly-ngx-zorro --base-href=formly-ngx-zorro/ --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,7 +22,7 @@
     "@angular/router": "^6.1.0",
     "@ngx-formly/core": "^4.7.2",
     "core-js": "^2.5.4",
-    "formly-ngx-zorro": "^0.0.4",
+    "formly-ngx-zorro": "^0.0.6",
     "ng-zorro-antd": "^1.4.0",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"

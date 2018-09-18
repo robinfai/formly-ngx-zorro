@@ -1,4 +1,20 @@
-<nz-select [nzShowSearch]="to['showSearch']" [nzAllowClear]="to['allowClear']" [nzPlaceHolder]="to['placeHolder']"
-           [formControl]="formControl" [formlyAttributes]="field" ngDefaultControl>
+<nz-select [formControl]="formControl"
+           [formlyAttributes]="field"
+           [nzShowSearch]="to['nzShowSearch']"
+           [nzAllowClear]="to['nzAllowClear']"
+           [nzPlaceHolder]="to['nzPlaceHolder']"
+           [nzOpen]="to['nzOpen']"
+           [nzAutoFocus]="to['nzAutoFocus']"
+           [nzDisabled]="to['nzDisabled']"
+           [nzDropdownClassName]="to['nzDropdownClassName']"
+           [nzDropdownMatchSelectWidth]="to['nzDropdownMatchSelectWidth']"
+           [nzDropdownStyle]="to['nzDropdownStyle']"
+           [nzServerSearch]="to['nzServerSearch']"
+           [nzFilterOption]="to['nzFilterOption']"
+           [nzMaxMultipleCount]="to['nzMaxMultipleCount']"
+           [nzMode]="to['nzMode']"
+           [nzNotFoundContent]="to['nzNotFoundContent']"
+           [nzSize]="to['nzSize']"
+           ngDefaultControl>
     <nz-option *ngFor="let option of to.options" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
 </nz-select>

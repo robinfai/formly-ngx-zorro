@@ -1,4 +1,10 @@
-<nz-radio-group [formControl]="formControl" [formlyAttributes]="field" ngDefaultControl>
+<nz-radio-group [formControl]="formControl"
+                [formlyAttributes]="field"
+                [nzName]="to['nzName']"
+                [nzDisabled]="to['nzDisabled']"
+                [nzSize]="to['nzSize']"
+                [nzButtonStyle]="to['nzButtonStyle']"
+                ngDefaultControl>
     <ng-container *ngFor="let item of to.options">
         <label nz-radio [nzValue]="item.value">{{ item.label }}</label>
     </ng-container>

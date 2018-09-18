@@ -83,7 +83,7 @@ export class AppComponent {
       key: 'input',
       type: 'input',
       templateOptions: {
-        label: 'input',
+        label: '',
         required: true,
       }
     },
