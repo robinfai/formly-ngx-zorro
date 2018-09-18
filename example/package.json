@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path ../formly-ngx-zorro --base-href=formly-ngx-zorro/ --prod",
+    "build": "ng build --output-path ../formly-ngx-zorro --base-href=. --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
