@@ -7,7 +7,7 @@
             [nzFor]="id">
         {{ to.label }}
     </nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" class="ant-col-sm-offset-10">
+    <nz-form-control [nzSm]="14" [nzXs]="24" [class.ant-col-sm-offset-6]="!to.label">
         <ng-template #fieldComponent></ng-template>
         <nz-form-explain *ngIf="showError">
             <formly-validation-message [field]="field"></formly-validation-message>

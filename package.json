@@ -1,6 +1,6 @@
 {
   "name": "formly-ngx-zorro",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "formly template for ant design , ng zorro",
   "main": "./bundles/formly-ngx-zorro.umd.js",
   "module": "./fesm5/formly-ngx-zorro.js",
