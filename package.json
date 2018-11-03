@@ -36,9 +36,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@angular/forms": "6.0.0",
-    "@ngx-formly/core": "^4.7.2",
-    "ng-zorro-antd": "^1.4.0",
     "tslib": "^1.9.0"
   },
   "peerDependencies": {
@@ -46,6 +43,9 @@
     "@angular/core": ">= 6.0.0"
   },
   "devDependencies": {
+    "@ngx-formly/core": "^4.7.2",
+    "ng-zorro-antd": "^1.4.0",
+    "@angular/forms": "6.0.0",
     "@angular/animations": "6.0.0",
     "@angular/common": "6.0.0",
     "@angular/compiler": "6.0.0",
@@ -81,7 +81,7 @@
     "ts-loader": "4.2.0",
     "tslint": "5.10.0",
     "tslint-angular": "1.1.1",
-    "typescript": "2.7.2",
+    "typescript": "2.9.2",
     "uglify-js": "3.3.23",
     "webpack": "4.6.0",
     "zone.js": "0.8.26",
