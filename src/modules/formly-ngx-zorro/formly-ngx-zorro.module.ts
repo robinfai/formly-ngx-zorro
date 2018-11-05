@@ -3,10 +3,11 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 // import { SumService } from '../services/sum.service';
 // import { SumComponent } from '../components/sum.component';
 import { CommonModule } from '@angular/common';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormlyFieldInputComponent } from './types/input/input-component';
+import { FormlyFieldTextareaComponent } from './types/textarea/textarea-component';
 import { FormlyFieldWrapperComponent } from './wrappers/formly-field-wrapper/formly-field-wrapper-component';
 import { FormlyFieldAutocompleteComponent } from './types/autocomplete/autocomplete-component';
 import { FormlyFieldCascaderComponent } from './types/cascader/cascader-component';
@@ -20,6 +21,7 @@ import { FormlyFieldSliderComponent } from './types/slider/slider-component';
 import { FormlyFieldSwitchComponent } from './types/switch/switch-component';
 import { FormlyFieldTimePickerComponent } from './types/time-picker/time-picker-component';
 import { FormlyFieldTreeSelectComponent } from './types/tree-select/tree-select-component';
+import { FormlyFieldDateRangePickerComponent } from "./types/date-range-picker/date-range-picker-component";
 
 export const ForRootFormlyModule = FormlyModule.forRoot({
     types: [
@@ -27,6 +29,11 @@ export const ForRootFormlyModule = FormlyModule.forRoot({
             name: 'input',
             wrappers: ['field-wrapper'],
             component: FormlyFieldInputComponent
+        },
+        {
+            name: 'textarea',
+            wrappers: ['field-wrapper'],
+            component: FormlyFieldTextareaComponent
         },
         {
             name: 'autocomplete',
@@ -47,6 +54,11 @@ export const ForRootFormlyModule = FormlyModule.forRoot({
             name: 'date-picker',
             wrappers: ['field-wrapper'],
             component: FormlyFieldDatePickerComponent
+        },
+        {
+            name: 'date-range-picker',
+            wrappers: ['field-wrapper'],
+            component: FormlyFieldDateRangePickerComponent
         },
         {
             name: 'number',
@@ -93,13 +105,18 @@ export const ForRootFormlyModule = FormlyModule.forRoot({
 });
 
 @NgModule({
+    providers: [
+        {provide: NZ_I18N, useValue: zh_CN}
+    ],
     imports: [NgZorroAntdModule, ReactiveFormsModule, FormsModule, CommonModule, ForRootFormlyModule],
     declarations: [
         FormlyFieldInputComponent,
+        FormlyFieldTextareaComponent,
         FormlyFieldAutocompleteComponent,
         FormlyFieldCascaderComponent,
         FormlyFieldCheckboxComponent,
         FormlyFieldDatePickerComponent,
+        FormlyFieldDateRangePickerComponent,
         FormlyFieldNumberComponent,
         FormlyFieldRadioComponent,
         FormlyFieldRateComponent,
