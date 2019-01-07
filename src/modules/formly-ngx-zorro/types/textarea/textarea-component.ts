@@ -8,6 +8,8 @@ import { FieldType } from '@ngx-formly/core';
                   [formControl]="formControl" 
                   [formlyAttributes]="field"
                   [rows]="to['rows']"
+                  [placeholder]="to['placeholder']"
+                  [nzAutosize]="to['nzAutosize']"
                   [nzSize]="to['nzSize']"></textarea>
     `
 })

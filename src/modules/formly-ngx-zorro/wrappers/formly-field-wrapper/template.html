@@ -1,13 +1,13 @@
 <nz-form-item>
     <nz-form-label
             *ngIf="to.label"
-            [nzSm]="6"
-            [nzXs]="24"
+            [class]="label_class"
             [nzRequired]="to.required"
-            [nzFor]="id">
+            [nzFor]="id"
+            style="font-size: 12px;">
         {{ to.label }}
     </nz-form-label>
-    <nz-form-control [nzSm]="18" [nzXs]="24" [class.ant-col-sm-offset-6]="!to.label">
+    <nz-form-control [class]="control_class" [nzValidateStatus]="showError?'error':''">
         <ng-template #fieldComponent></ng-template>
         <nz-form-explain *ngIf="showError">
             <formly-validation-message [field]="field"></formly-validation-message>
