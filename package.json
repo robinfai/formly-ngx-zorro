@@ -81,7 +81,7 @@
     "ts-loader": "4.2.0",
     "tslint": "5.10.0",
     "tslint-angular": "1.1.1",
-    "typescript": "2.9.2",
+    "typescript": "2.7.2",
     "uglify-js": "3.3.23",
     "webpack": "4.6.0",
     "zone.js": "0.8.26",

@@ -18,16 +18,16 @@ export class FormlyFieldWrapperComponent extends FieldWrapper implements OnInit 
 
     calcCols() {
         if (this.field.className) {
-            let class_list = this.field.className.split(' ');
-            let label_class_list = [];
-            let control_class_list = [];
+            const class_list = this.field.className.split(' ');
+            const label_class_list: string[] = [];
+            const control_class_list: string[] = [];
             class_list.forEach((class_item) => {
-                let class_segments = class_item.split('-');
+                const class_segments = class_item.split('-');
                 if (class_segments.length < 3) {
                     return false;
                 }
-                if (class_segments[0] != 'ant'
-                    || class_segments[1] != 'col') {
+                if (class_segments[0] !== 'ant'
+                    || class_segments[1] !== 'col') {
                     return false;
                 }
                 let size;
@@ -36,16 +36,16 @@ export class FormlyFieldWrapperComponent extends FieldWrapper implements OnInit 
                     size = class_segments[2];
                     cols = class_segments[3];
                 } else {
-                    cols = class_segments[2]
+                    cols = class_segments[2];
                 }
-                let class_prefix = 'ant-col';
-                let label_class_segments = [class_prefix];
-                let control_class_segments = [class_prefix];
+                const class_prefix = 'ant-col';
+                const label_class_segments = [class_prefix];
+                const control_class_segments = [class_prefix];
                 if (size) {
                     label_class_segments.push(size);
                     control_class_segments.push(size);
                 }
-                if (!this.field.templateOptions.label) {
+                if (!this.field.templateOptions || !this.field.templateOptions.label) {
                     label_class_segments.push('offset');
                 }
                 switch (cols) {
@@ -79,10 +79,10 @@ export class FormlyFieldWrapperComponent extends FieldWrapper implements OnInit 
                         break;
                 }
 
-                if (this.field.templateOptions.label) {
+                if (this.field.templateOptions && this.field.templateOptions.label) {
                     label_class_list.push(label_class_segments.join('-'));
                     control_class_list.push(control_class_segments.join('-'));
-                }else{
+                } else {
                     control_class_list.push(label_class_segments.join('-'));
                     control_class_list.push(control_class_segments.join('-'));
                 }
