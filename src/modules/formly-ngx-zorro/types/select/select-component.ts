@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FieldType } from '@ngx-formly/core';
-import { defaultFilterOption } from 'ng-zorro-antd/select/nz-option.pipe';
 
 @Component({
     selector: 'nz-formly-field-select-component',
@@ -8,7 +7,13 @@ import { defaultFilterOption } from 'ng-zorro-antd/select/nz-option.pipe';
 })
 export class FormlyFieldSelectComponent extends FieldType implements OnInit {
 
-    defaultFilterOption = defaultFilterOption;
+    defaultFilterOption = function (input: string, option: any): boolean {
+        if (option && option.nzLabel) {
+            return option.nzLabel.toLowerCase().indexOf(input.toLowerCase()) > -1;
+        } else {
+            return false;
+        }
+    };
 
     ngOnInit() {
         if (!this.to['nzMode']) {
